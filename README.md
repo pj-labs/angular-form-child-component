@@ -1,7 +1,7 @@
 # Angular Form Child Component
 
-This repository is a simple example of how to use a `formCpntrolName` or `formControl` in child component. 
-The parent component defines a form group and the child component can define a form control.
+This repository is a simple example of how to use a `formControlName` or `formControl` in child component. 
+The parent component defines a form group and the child component can define a form control without needing to pass the form group to the child component.
 
 The parent component also handles the form submission.
 
