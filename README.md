@@ -5,7 +5,10 @@ The parent component defines a form group and the child component can define a f
 
 The parent component also handles the form submission.
 
-[app.component.ts](src%2Fapp%2Fapp.component.ts)
+# Demo
+See demo at https://stackblitz.com/~/github.com/pj-labs/angular-form-child-component
+
+### [app.component.ts](src%2Fapp%2Fapp.component.ts)
 ```typescript
   formGroup = this.fb.group({
     firstName: [''],
@@ -13,7 +16,7 @@ The parent component also handles the form submission.
     email: [''],
   });
 ```
-[app.component.html](src%2Fapp%2Fapp.component.html)
+### [app.component.html](src%2Fapp%2Fapp.component.html)
 ```angular2html
   <form [formGroup]="formGroup" class="min-w-min justify-center m-4">
   <div class="mb-4">
