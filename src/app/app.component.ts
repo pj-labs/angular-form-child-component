@@ -11,7 +11,6 @@ import { ChildComponent } from './child/child.component';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'angular-form-child-component';
   fb = inject(FormBuilder);
 
   formGroup = this.fb.group({
