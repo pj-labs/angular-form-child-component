@@ -5,7 +5,15 @@ The parent component defines a form group and the child component can define a f
 
 The parent component also handles the form submission.
 
-
+[app.component.ts](src%2Fapp%2Fapp.component.ts)
+```typescript
+  formGroup = this.fb.group({
+    firstName: [''],
+    lastName: [''],
+    email: [''],
+  });
+```
+[app.component.html](src%2Fapp%2Fapp.component.html)
 ```angular2html
   <form [formGroup]="formGroup" class="min-w-min justify-center m-4">
   <div class="mb-4">
@@ -24,5 +32,5 @@ The parent component also handles the form submission.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to http://localhost:4200
 
