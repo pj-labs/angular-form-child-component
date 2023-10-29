@@ -1,27 +1,28 @@
-# FormTest
+# Angular Form Child Component
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+This repository is a simple example of how to use a `formCpntrolName` or `formControl` in child component. 
+The parent component defines a form group and the child component can define a form control.
+
+The parent component also handles the form submission.
+
+
+```angular2html
+  <form [formGroup]="formGroup" class="min-w-min justify-center m-4">
+  <div class="mb-4">
+    <label class="block text-gray-700" for="name">First Name: </label>
+    <input formControlName="firstName" id="firstName" placeholder="First Name" type="text">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700" for="name">Last Name: </label>
+    <input formControlName="lastName" id="lastName" placeholder="Last Name" type="text">
+  </div>
+  <app-child formControlName="email"></app-child>
+  <button type="submit">Submit</button>
+  <br/>
+</form>
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
