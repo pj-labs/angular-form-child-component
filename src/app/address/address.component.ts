@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ControlContainer, FormBuilder, FormGroupDirective, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
@@ -15,12 +15,8 @@ import { ControlContainer, FormBuilder, FormGroupDirective, ReactiveFormsModule,
 	styles: ``,
 })
 export class AddressComponent implements OnInit {
-	parent: FormGroupDirective;
+	parent = inject(FormGroupDirective);
 	fb = new FormBuilder();
-
-	constructor(parent: FormGroupDirective) {
-		this.parent = parent;
-	}
 
 	ngOnInit() {
 		this.parent.form.addControl(
